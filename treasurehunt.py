@@ -10,7 +10,7 @@ print("I am waiting to pass along instructions to one who is worthy.\nWhat is yo
 
 name = input(":")
 
-approvedNamesList = ["Jason", "Andrew", "Tom", "Ian"]
+approvedNamesList = ["Jason", "Andrew", "Tom", "Flintlock", "Ian"]
 approved = False
 
 for testName in approvedNamesList:
@@ -30,9 +30,8 @@ while stillPlaying == True:
 
 	if nextCommand == "walk North":
 		print("you walk through the door to the North")
-		#
-		#ENTER CODE HERE
-		#
+		print("Guess you weren't one of our VIPs.")
+		print("You fell into lava and died instantly, taking all your earthly possesions with you.")
 	
 	elif nextCommand == "walk East":
 		print("you walk through the door to the East")
