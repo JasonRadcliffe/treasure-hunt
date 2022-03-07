@@ -1,7 +1,7 @@
 #This is a shared programming exercise developed by the students of BFA Computer Club
 #March 2022
 
-print ("Treasure Hunt Python Program\n\nThe main commands are \"walk [direction]\", \"pick up\", and \"use\"")
+print ("Treasure Hunt Python Program\n\nThe main commands are \"walk [direction]\", \"pick up\", \"use\", and \"exit\"")
 
 print ("Welcome, explorer. You find yourself in the basement of an ancient and spooky looking castle.	")
 print ("The room you are in has thick red carpet, and 4 doors, one on each wall")
@@ -51,6 +51,10 @@ while stillPlaying == True:
 		#
 		#ENTER CODE HERE
 		#
+
+	elif nextCommand == "exit":
+		stillPlaying = False
+		break
 
 
 	print("You hear a loud \"POP!\" and to your surprise you find yourself back in the original room.") 
