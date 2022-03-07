@@ -30,9 +30,8 @@ while stillPlaying == True:
 
 	if nextCommand == "walk North":
 		print("you walk through the door to the North")
-		#
-		#ENTER CODE HERE
-		#
+		print("Guess you weren't one of our VIPs.")
+		print("You fell into lava and died instantly, taking all your earthly possesions with you.")
 	
 	elif nextCommand == "walk East":
 		print("you walk through the door to the East")
