@@ -10,7 +10,7 @@ print("I am waiting to pass along instructions to one who is worthy.\nWhat is yo
 
 name = input(":")
 
-approvedNamesList = ["Jason", "Andrew"]
+approvedNamesList = ["Jason", "Andrew", "Tom"]
 approved = False
 
 for testName in approvedNamesList:
