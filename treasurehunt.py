@@ -18,6 +18,8 @@ for testName in approvedNamesList:
 		approved = True
 		print("The old man silently hands you a safety deposit box and vanishes. Inside you find a letter with this text:")
 		print("Not all who wander are lost, but you should definitely not wander North.")
+		print("You open the letter and find a small key inside")
+		small_key = 0
 
 if approved == False:
 	print("The old man simply vanishes without saying anything. Hmm...")
@@ -30,9 +32,17 @@ while stillPlaying == True:
 
 	if nextCommand == "walk North":
 		print("you walk through the door to the North")
-		print("Guess you weren't one of our VIPs.")
-		print("You fell into lava and died instantly, taking all your earthly possesions with you.")
-	
+		print("You find yourself in a long, dark hallway.")
+		print("There is no sound, and as you go father along the darker it becomes.")
+		print("Should you walk foward or walk back?")
+		nasnwer = input(":")
+		if nasnwer == "walk forward":
+			print("You continue further into the darkness, unafraid of what might lurk in the shadows.")
+			
+		elif nasnwer == "walk back":
+			print("You walk back to the starting room.")
+			break
+
 	elif nextCommand == "walk East":
 		print("you walk through the door to the East")
 		#
