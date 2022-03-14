@@ -29,33 +29,34 @@ stillPlaying = True
 while stillPlaying == True:
 	print("What do you do next?")
 	nextCommand = input(":")
+	nextCommand = (nextCommand.lower())
 
-	if nextCommand == "walk North":
+	if nextCommand == "walk north":
 		print("you walk through the door to the North")
 		print("You find yourself in a long, dark hallway.")
 		print("There is no sound, and as you go father along the darker it becomes.")
 		print("Should you walk foward or walk back?")
 		nasnwer = input(":")
+		nasnwer = nasnwer.lower()
 		if nasnwer == "walk forward":
 			print("You continue further into the darkness, unafraid of what might lurk in the shadows.")
-			
 		elif nasnwer == "walk back":
 			print("You walk back to the starting room.")
-			break
+			
 
-	elif nextCommand == "walk East":
+	elif nextCommand == "walk east":
 		print("you walk through the door to the East")
 		#
 		#ENTER CODE HERE
 		#
 	
-	elif nextCommand == "walk South":
+	elif nextCommand == "walk south":
 		print("you walk through the door to the South")
 		#
 		#ENTER CODE HERE
 		#
 	
-	elif nextCommand == "walk West":
+	elif nextCommand == "walk west":
 		print("you walk through the door to the West")
 		#
 		#ENTER CODE HERE
