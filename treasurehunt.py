@@ -1,5 +1,5 @@
 #This is a shared programming exercise developed by the students of BFA Computer Club
-#March 2022
+#March 2022.
 
 print ("Treasure Hunt Python Program\n\nThe main commands are \"walk [direction]\", \"pick up\", \"use\", and \"exit\"")
 
