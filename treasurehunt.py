@@ -1,5 +1,5 @@
 #This is a shared programming exercise developed by the students of BFA Computer Club
-#March 2022
+#March 2022.
 
 print ("Treasure Hunt Python Program\n\nThe main commands are \"walk [direction]\", \"pick up\", \"use\", and \"exit\"")
 
@@ -18,6 +18,8 @@ for testName in approvedNamesList:
 		approved = True
 		print("The old man silently hands you a safety deposit box and vanishes. Inside you find a letter with this text:")
 		print("Not all who wander are lost, but you should definitely not wander North.")
+		print("You open the letter and find a small key inside")
+		small_key = 0
 
 if approved == False:
 	print("The old man simply vanishes without saying anything. Hmm...")
@@ -27,25 +29,34 @@ stillPlaying = True
 while stillPlaying == True:
 	print("What do you do next?")
 	nextCommand = input(":")
+	nextCommand = (nextCommand.lower())
 
-	if nextCommand == "walk North":
+	if nextCommand == "walk north":
 		print("you walk through the door to the North")
-		print("Guess you weren't one of our VIPs.")
-		print("You fell into lava and died instantly, taking all your earthly possesions with you.")
-	
-	elif nextCommand == "walk East":
+		print("You find yourself in a long, dark hallway.")
+		print("There is no sound, and as you go father along the darker it becomes.")
+		print("Should you walk foward or walk back?")
+		nasnwer = input(":")
+		nasnwer = nasnwer.lower()
+		if nasnwer == "walk forward":
+			print("You continue further into the darkness, unafraid of what might lurk in the shadows.")
+		elif nasnwer == "walk back":
+			print("You walk back to the starting room.")
+			
+
+	elif nextCommand == "walk east":
 		print("you walk through the door to the East")
 		#
 		#ENTER CODE HERE
 		#
 	
-	elif nextCommand == "walk South":
+	elif nextCommand == "walk south":
 		print("you walk through the door to the South")
 		#
 		#ENTER CODE HERE
 		#
 	
-	elif nextCommand == "walk West":
+	elif nextCommand == "walk west":
 		print("you walk through the door to the West")
 		#
 		#ENTER CODE HERE
