@@ -11,6 +11,10 @@ print("I am waiting to pass along instructions to one who is worthy.\nWhat is yo
 name = input(":")
 Position = [ 2 , 2]
 
+Room = [[room1,1][room4][room7]
+        [room2,2][room5][room8]
+        [room3,3][room6][room9]
+
 def Walk_North(): 
 	Position[1] += 1
 
@@ -48,9 +52,6 @@ while stillPlaying == True:
 	if nextCommand == "walk North":
 		Walk_North()
 		print("you walk through the door to the North")
-		#
-		#ENTER CODE HERE
-		#
 	elif nextCommand == "walk East":
 		Walk_East()
 		print("you walk through the door to the East")
@@ -75,9 +76,13 @@ while stillPlaying == True:
 	elif nextCommand == "exit":
 		stillPlaying = False
 		break
+	
+	if Position[0] == 2 and Position[1] == 3:
+                print("The area you walk into is densly wooded,\nsounds of animals surrounding you as you try to find your bearings in the wood.")
+                print("You reach the center of the square, a small clearing with a stream running through it, the sun barely reaching it through the leaves.")
 
 
-	print("You hear a loud \"POP!\" and to your surprise you find yourself back in the original room.") 
+
 
 
 
