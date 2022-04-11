@@ -90,7 +90,7 @@ stillPlaying = True
 while stillPlaying == True:
 	print("What do you do next?")
 	nextCommand = input(":")
-        nextCommand = lowercase.(nextCommand)
+        nextCommand = nextCommand.lower()
         
 	if nextCommand == "walk north":
 		Walk_North()
