@@ -11,9 +11,13 @@ print("I am waiting to pass along instructions to one who is worthy.\nWhat is yo
 name = input(":")
 Position = [ 2 , 2]
 
-Room = [[room1,1][room4][room7]
-        [room2,2][room5][room8]
-        [room3,3][room6][room9]
+
+room = [[[0],[0],[0]],
+        [[0],[0],[0]],
+        [[0],[0],[0]]]
+
+print(room[0][0][0])
+
 
 def Walk_North(): 
 	Position[1] += 1
