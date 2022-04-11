@@ -21,32 +21,33 @@ room = [[[0],[0],[0],[0],[0]],
 
 
 
-room[0][0][0] =
-room[0][1][0] =
-room[0][2][0] =
-room[0][3][0] =
-room[0][4][0] =
-room[1][0][0] =
-room[1][1][0] =
-room[1][2][0] =
-room[1][3][0] =
-room[1][4][0] =
-room[2][0][0] =
-room[2][1][0] =
-room[2][3][0] =
-room[2][4][0] =
-room[3][0][0] = 
-room[3][1][0] =
-room[3][2][0] =
-room[3][3][0] =
-room[3][4][0] =
-room[4][0][0] =
-room[4][1][0] =
-room[4][2][0] =
-room[4][3][0] =
-room[4][4][0] =
-
-
+room[0][0][0] = ""
+room[0][1][0] = ""
+room[0][2][0] = ""
+room[0][3][0] = ""
+room[0][4][0] = ""
+room[1][0][0] = ""
+room[1][1][0] = ""
+room[1][2][0] = ""
+room[1][3][0] = ""
+room[1][4][0] = ""
+room[2][0][0] = ""
+room[2][1][0] = """You open the door and step out onto a small rocky platform. You notice much too late that the entire area,
+other than the place you are now standing, is covered in boiling lava. You turn back, only to have the door into the original room vanish
+before your very eyes. The lava rises, and you roast alive."""
+room[2][2][0] = "You find yourself back in the laviously decoration room you began in. The same doors are available to you: North, South, East, and West" 
+room[2][3][0] = ""
+room[2][4][0] = ""
+room[3][0][0] = ""
+room[3][1][0] = ""
+room[3][2][0] = ""
+room[3][3][0] = ""
+room[3][4][0] = ""
+room[4][0][0] = ""
+room[4][1][0] = ""
+room[4][2][0] = ""
+room[4][3][0] = ""
+room[4][4][0] = ""
 
 
 def Walk_North(): 
@@ -65,6 +66,13 @@ def Walk_East():
 def Walk_West(): 
 	Position[0] -= 1
 
+
+def death():
+        Position = [2,2]
+        print(Position)
+
+        
+
 approvedNamesList = ["Jason", "Andrew", "Tom", "Flintlock", "Ian" , "Human"]
 approved = False
 
@@ -82,25 +90,26 @@ stillPlaying = True
 while stillPlaying == True:
 	print("What do you do next?")
 	nextCommand = input(":")
-
-	if nextCommand == "walk North":
+        nextCommand = lowercase.(nextCommand)
+        
+	if nextCommand == "walk north":
 		Walk_North()
 		print("you walk through the door to the North")
-	elif nextCommand == "walk East":
+	elif nextCommand == "walk east":
 		Walk_East()
 		print("you walk through the door to the East")
 		#
 		#ENTER CODE HERE
 		#
 	
-	elif nextCommand == "walk South":
+	elif nextCommand == "walk south":
 		Walk_South()
 		print("you walk through the door to the South")
 		#
 		#ENTER CODE HERE
 		#
 	
-	elif nextCommand == "walk West":
+	elif nextCommand == "walk west":
 		Walk_West()
 		print("you walk through the door to the West")
 		#
@@ -112,8 +121,8 @@ while stillPlaying == True:
 		break
 	
 	if Position[0] == 2 and Position[1] == 3:
-                print("The area you walk into is densly wooded,\nsounds of animals surrounding you as you try to find your bearings in the wood.")
-                print("You reach the center of the square, a small clearing with a stream running through it, the sun barely reaching it through the leaves.")
+                print(room[2][1][0])
+                death()
 
 
 
