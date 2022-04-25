@@ -167,7 +167,6 @@ def Walk_West():
 
 def death():
         Position = [2,2]
-        print(Position)
 
         
 
@@ -221,8 +220,9 @@ while stillPlaying == True:
 		break
 	elif nextCommand == "map":
 		print("You are at position " + str(Position[0]) + "," + str(Position[1]))
-
-	if Position[0] == 2 and Position[1] == 3:
+	elif nextCommand == "return":
+		Position = [2,2]
+	if Position[0] == 2 and Position[1] == 1:
 		print(room[2][3][0])
 		death()
 
