@@ -1,7 +1,7 @@
 #This is a shared programming exercise developed by the students of BFA Computer Club
 #March 2022
 
-print ("Treasure Hunt Python Program\n\nThe main commands are \"walk [direction]\", \"pick up\", \"use\", and \"exit\"")
+print ("Treasure Hunt Python Program\n\nThe main commands are \"walk [direction]\", \"pick up\", \"use\", \"map\", and \"exit\"")
 
 print ("Welcome, explorer. You find yourself in the basement of an ancient and spooky looking castle.	")
 print ("The room you are in has thick red carpet, and 4 doors, one on each wall")
@@ -90,8 +90,7 @@ stillPlaying = True
 while stillPlaying == True:
 	print("What do you do next?")
 	nextCommand = input(":")
-        nextCommand = nextCommand.lower()
-        
+	nextCommand = nextCommand.lower()
 	if nextCommand == "walk north":
 		Walk_North()
 		print("you walk through the door to the North")
@@ -119,9 +118,11 @@ while stillPlaying == True:
 	elif nextCommand == "exit":
 		stillPlaying = False
 		break
+	elif nextCommand == "map":
+                print("You are at position " + str(Position[0]) + "," + str(Position[1]))
 	
 	if Position[0] == 2 and Position[1] == 3:
-                print(room[2][1][0])
+                
                 death()
 
 
