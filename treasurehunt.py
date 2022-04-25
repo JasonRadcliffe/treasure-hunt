@@ -35,7 +35,7 @@ room[2][0][0] = ""
 room[2][1][0] = """You open the door and step out onto a small rocky platform. You notice much too late that the entire area,
 other than the place you are now standing, is covered in boiling lava. You turn back, only to have the door into the original room vanish
 before your very eyes. The lava rises, and you roast alive."""
-room[2][2][0] = "You find yourself back in the laviously decoration room you began in. The same doors are available to you: North, South, East, and West" 
+room[2][2][0] = "You find yourself back in the laviously decorated room you began in. The same doors are available to you: North, South, East, and West" 
 room[2][3][0] = ""
 room[2][4][0] = ""
 room[3][0][0] = ""
@@ -122,7 +122,7 @@ while stillPlaying == True:
                 print("You are at position " + str(Position[0]) + "," + str(Position[1]))
 	
 	if Position[0] == 2 and Position[1] == 3:
-                
+                print(room[2][2][0])
                 death()
 
 
