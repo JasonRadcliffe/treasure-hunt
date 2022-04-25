@@ -12,15 +12,14 @@ name = input(":")
 Position = [ 2 , 2]
 
 
-room = [[[0],[0],[0],[0],[0]],
-        [[0],[0],[0],[0],[0]],
-        [[0],[0],[0],[0],[0]],
-        [[0],[0],[0],[0],[0]],
-        [[0],[0],[0],[0],[0]]]
+room = [[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
+        [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
+        [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
+        [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
+        [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]]
 
 
-
-
+#descriptions of rooms
 room[0][0][0] = ""
 room[0][1][0] = ""
 room[0][2][0] = ""
@@ -28,7 +27,8 @@ room[0][3][0] = ""
 room[0][4][0] = ""
 room[1][0][0] = ""
 room[1][1][0] = ""
-room[1][2][0] = ""
+room[1][2][0] = """You open the door to find a magnificent courtyard, the walls decorated with banners of red and gold. Walking to the center, you find only one door beyond,
+leading to the West."""
 room[1][3][0] = ""
 room[1][4][0] = ""
 room[2][0][0] = ""
@@ -49,16 +49,118 @@ room[4][2][0] = ""
 room[4][3][0] = ""
 room[4][4][0] = ""
 
+#whether/not you can walk through certain doors
+# 1 = North, 2 = East 3 = South 4 = West
+room[0][0][1] = 0
+room[0][0][2] = 1
+room[0][0][3] = 1
+room[0][0][4] = 0
+room[0][1][1] = 1
+room[0][1][2] = 0
+room[0][1][3] = 1
+room[0][1][4] = 0
+room[0][2][1] = 1
+room[0][2][2] = 1
+room[0][2][3] = 1
+room[0][2][4] = 0
+room[0][3][1] = 1
+room[0][3][2] = 1
+room[0][3][3] = 0
+room[0][3][4] = 0
+room[0][4][1] = 0
+room[0][4][2] = 1
+room[0][4][3] = 0
+room[0][4][4] = 0
+room[1][0][1] = 0
+room[1][0][2] = 0
+room[1][0][3] = 0
+room[1][0][4] = 1
+room[1][1][1] = 0
+room[1][1][2] = 0
+room[1][1][3] = 0
+room[1][1][4] = 0
+room[1][2][1] = 0
+room[1][2][2] = 1
+room[1][2][3] = 0
+room[1][2][4] = 1
+room[1][3][1] = 0
+room[1][3][2] = 0
+room[1][3][3] = 0
+room[1][3][4] = 1
+room[1][4][1] = 0
+room[1][4][2] = 1
+room[1][4][3] = 0
+room[1][4][4] = 1
+room[2][0][1] = 0
+room[2][0][2] = 1
+room[2][0][3] = 0
+room[2][0][4] = 0
+room[2][1][1] = 0
+room[2][1][2] = 0
+room[2][1][3] = 1
+room[2][1][4] = 0
+room[2][2][1] = 1
+room[2][2][2] = 1
+room[2][2][3] = 1
+room[2][2][4] = 1
+room[2][3][1] = 1
+room[2][3][2] = 1
+room[2][3][3] = 1
+room[2][3][4] = 0
+room[2][4][1] = 1
+room[2][4][2] = 0
+room[2][4][3] = 0
+room[2][4][4] = 1
+room[3][0][1] = 0
+room[3][0][2] = 1
+room[3][0][3] = 1
+room[3][0][4] = 1
+room[3][1][1] = 1
+room[3][1][2] = 0
+room[3][1][3] = 1
+room[3][1][4] = 0
+room[3][2][1] = 1
+room[3][2][2] = 1
+room[3][2][3] = 1
+room[3][2][4] = 1
+room[3][3][1] = 1
+room[3][3][2] = 1
+room[3][3][3] = 1
+room[3][3][4] = 1
+room[3][4][1] = 1
+room[3][4][2] = 1
+room[3][4][3] = 0
+room[3][4][4] = 0
+room[4][0][1] = 0
+room[4][0][2] = 0
+room[4][0][3] = 0
+room[4][0][4] = 1
+room[4][1][1] = 0
+room[4][1][2] = 0
+room[4][1][3] = 1
+room[4][1][4] = 0
+room[4][2][1] = 1
+room[4][2][2] = 0
+room[4][2][3] = 0
+room[4][2][4] = 1
+room[4][3][1] = 0
+room[4][3][2] = 0
+room[4][3][3] = 0
+room[4][3][4] = 1
+room[4][4][1] = 0
+room[4][4][2] = 0
+room[4][4][3] = 0
+room[4][4][4] = 1
 
 def Walk_North(): 
-	Position[1] += 1
+	Position[1] -= 1
 
 	#	print("your current position is:" + str(Position[0]) + "," + str(Position[1]))
 	#	Walk_North() 
 	#	print("your current position is:" + str(Position[0]) + "," + str(Position[1]))
 
 def Walk_South(): 
-	Position[1] -= 1
+	Position[1] += 1
 
 def Walk_East(): 
 	Position[0] += 1
@@ -92,38 +194,41 @@ while stillPlaying == True:
 	nextCommand = input(":")
 	nextCommand = nextCommand.lower()
 	if nextCommand == "walk north":
-		Walk_North()
-		print("you walk through the door to the North")
+		if room[Position[0]][Position[1]][1] == 1:
+			Walk_North()
+			print("you walk through the door to the North")
+		else:
+			print("You cannot walk that way")
 	elif nextCommand == "walk east":
-		Walk_East()
-		print("you walk through the door to the East")
-		#
-		#ENTER CODE HERE
-		#
-	
+		if room[(Position[0])][Position[1]][2] == 1:
+			Walk_East()
+			print("you walk through the door to the East")
+		else:
+			print("You cannot walk that way")
+
 	elif nextCommand == "walk south":
-		Walk_South()
-		print("you walk through the door to the South")
-		#
-		#ENTER CODE HERE
-		#
-	
+		if room[(Position[0])][Position[1]][3] == 1:
+			Walk_South()
+			print("you walk through the door to the South")
+		else:
+			print("You cannot walk that way")
+
 	elif nextCommand == "walk west":
-		Walk_West()
-		print("you walk through the door to the West")
-		#
-		#ENTER CODE HERE
-		#
+		if room[(Position[0])][Position[1]][4] == 1:
+			Walk_West()
+			print("you walk through the door to the West")
+		else:
+			print("You cannot walk that way")
 
 	elif nextCommand == "exit":
 		stillPlaying = False
 		break
 	elif nextCommand == "map":
-                print("You are at position " + str(Position[0]) + "," + str(Position[1]))
-	
+		print("You are at position " + str(Position[0]) + "," + str(Position[1]))
+
 	if Position[0] == 2 and Position[1] == 3:
-                print(room[2][2][0])
-                death()
+		print(room[2][3][0])
+		death()
 
 
 
