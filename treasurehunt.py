@@ -155,10 +155,6 @@ room[4][4][4] = 1
 def Walk_North(): 
 	Position[1] -= 1
 
-	#	print("your current position is:" + str(Position[0]) + "," + str(Position[1]))
-	#	Walk_North() 
-	#	print("your current position is:" + str(Position[0]) + "," + str(Position[1]))
-
 def Walk_South(): 
 	Position[1] += 1
 
