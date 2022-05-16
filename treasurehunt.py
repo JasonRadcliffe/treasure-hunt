@@ -30,8 +30,8 @@ room[1][0][0] = ""
 room[1][1][0] = """You escape the confines of flesh and step into an infinite void of black. Two eyes open slowly, quizzically. \"How did you get here…\" It asks, a rotten stench pooling from its mouth. 
 \"No matter, you appear like a good snack!\" Savage teeth rip you apart. 
 We don't like cheaters here """
-room[1][2][0] = """You open the door to find a magnificent courtyard, the walls decorated with banners of red and gold. Walking to the center, you find only one door beyond,
-leading to the West."""
+room[1][2][0] = """You step out onto the wall of a castle, the wind howling like a madman. However, the temperature's not too bad
+There doesn't seem to be a way off except for directly West and East"""
 room[1][3][0] = ""
 room[1][4][0] = ""
 room[2][0][0] = ""
@@ -43,11 +43,15 @@ room[2][3][0] = ""
 room[2][4][0] = ""
 room[3][0][0] = ""
 room[3][1][0] = ""
-room[3][2][0] = ""
+room[3][2][0] = """It's a hallway, but even so it is yet another magnificent feature of wherever you are. The carpet is luscious and thick, the chandeliers huge and well-lit,
+and magnificent paintings line the walls. You casually wonder who or what lived in this place, and where they went.
+There are another four doors in here, but the Eastern door seems to lead to stairs, while the Northern has scratches of dirt and grass on the carpet in front of it."""
 room[3][3][0] = ""
 room[3][4][0] = ""
 room[4][0][0] = ""
-room[4][1][0] = ""
+room[4][1][0] = """Walking through the doorway, you are startled to find yourself atop a high tower, looking down at a series of courtyards below.
+To the North-East you can see a giant figure sitting in one of them seemingly guarding a small storage shed directly to your North, likely used for housing keys.
+There is no other exit off of the tower other than the way you came."""
 room[4][2][0] = ""
 room[4][3][0] = ""
 room[4][4][0] = ""
@@ -238,6 +242,7 @@ while stillPlaying == True:
 		Position[1] = int(y)
 	else:
 		print("Sorry, please repeat")
+		cwtw = 1
 	if cwtw == 0:
 		if Position[0] == 2 and Position[1] == 1:
 			print(room[2][1][0])
