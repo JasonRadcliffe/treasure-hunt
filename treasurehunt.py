@@ -27,7 +27,9 @@ room[0][2][0] = ""
 room[0][3][0] = ""
 room[0][4][0] = ""
 room[1][0][0] = ""
-room[1][1][0] = ""
+room[1][1][0] = """You escape the confines of flesh and step into an infinite void of black. Two eyes open slowly, quizzically. \"How did you get here…\" It asks, a rotten stench pooling from its mouth. 
+\"No matter, you appear like a good snack!\" Savage teeth rip you apart. 
+We don't like cheaters here """
 room[1][2][0] = """You open the door to find a magnificent courtyard, the walls decorated with banners of red and gold. Walking to the center, you find only one door beyond,
 leading to the West."""
 room[1][3][0] = ""
@@ -229,16 +231,23 @@ while stillPlaying == True:
 		print("You are at position " + str(Position[0]) + "," + str(Position[1]))
 	elif nextCommand == "return":
 		Position = [2,2]
+	elif nextCommand == "tp":
+		x = input("x:")
+		y = input("y:")
+		Position[0] = int(x)
+		Position[1] = int(y)
 	else:
 		print("Sorry, please repeat")
 	if cwtw == 0:
 		if Position[0] == 2 and Position[1] == 1:
 			print(room[2][1][0])
 			death()
+		if Position[0] == 1 and Position[1] == 1:
+			print(room[Position[0]][Position[1]][0])
+			death()
 		else:
 			print(room[Position[0]][Position[1]][0])
 	cwtw = 0
-
 
 
 
