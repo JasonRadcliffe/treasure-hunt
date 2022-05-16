@@ -1,7 +1,7 @@
 #This is a shared programming exercise developed by the students of BFA Computer Club
 #March 2022
 
-print ("Treasure Hunt Python Program\n\nThe main commands are \"walk [direction]\", \"pick up\", \"use\", \"map\", and \"exit\"")
+print ("Treasure Hunt Python Program\n\nThe main commands are \"walk [direction]\", \"pick up\", \"use\", \"map\", \"repeat\" and \"exit\"")
 
 print ("Welcome, explorer. You find yourself in the basement of an ancient and spooky looking castle.	")
 print ("The room you are in has thick red carpet, and 4 doors, one on each wall")
@@ -11,6 +11,7 @@ print("I am waiting to pass along instructions to one who is worthy.\nWhat is yo
 name = input(":")
 Position = [ 2 , 2]
 cwtw = 0
+d = 0
 
 
 room = [[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
@@ -43,8 +44,7 @@ room[2][3][0] = ""
 room[2][4][0] = ""
 room[3][0][0] = ""
 room[3][1][0] = ""
-room[3][2][0] = """It's a hallway, but even so it is yet another magnificent feature of wherever you are. The carpet is luscious and thick, the chandeliers huge and well-lit,
-and magnificent paintings line the walls. You casually wonder who or what lived in this place, and where they went.
+room[3][2][0] = """It's a hallway, but even so it is yet another magnificent feature of wherever you are. The carpet is luscious and thick, the chandeliers huge and well-lit, and magnificent paintings line the walls. You casually wonder who or what lived in this place, and where they went.
 There are another four doors in here, but the Eastern door seems to lead to stairs, while the Northern has scratches of dirt and grass on the carpet in front of it."""
 room[3][3][0] = ""
 room[3][4][0] = ""
@@ -52,7 +52,10 @@ room[4][0][0] = ""
 room[4][1][0] = """Walking through the doorway, you are startled to find yourself atop a high tower, looking down at a series of courtyards below.
 To the North-East you can see a giant figure sitting in one of them seemingly guarding a small storage shed directly to your North, likely used for housing keys.
 There is no other exit off of the tower other than the way you came."""
-room[4][2][0] = ""
+room[4][2][0] = """You pause at this landing, out of breath after climbing so many flights of stairs.
+There is a small window, out of which you can see a dense green forest. Jagged mountains box the whole view in, white peaks touching the scattered cloud.
+You read a small inscription below the window: \"We love to look at that which we cannot have\" 
+The stairs continue upwards to the North and down to the East."""
 room[4][3][0] = ""
 room[4][4][0] = ""
 
@@ -171,6 +174,23 @@ def Walk_East():
 def Walk_West(): 
 	Position[0] -= 1
 
+def Battle():
+	doop = 0
+	play = input()
+	play = play.lower()
+	if play == "rock":
+		best = 1
+	elif play == "scissors":
+		best = 2
+	elif play == "paper":
+		best = 3
+
+	other = randint(1,3)
+	while doop == 1:
+		if best == 1 and other == 2
+			win = 1
+		elif best == 1 and other ==
+
 
 def death():
 	Position[0] = 2
@@ -233,6 +253,7 @@ while stillPlaying == True:
 		break
 	elif nextCommand == "map":
 		print("You are at position " + str(Position[0]) + "," + str(Position[1]))
+		cwtw = 1
 	elif nextCommand == "return":
 		Position = [2,2]
 	elif nextCommand == "tp":
@@ -240,6 +261,8 @@ while stillPlaying == True:
 		y = input("y:")
 		Position[0] = int(x)
 		Position[1] = int(y)
+	elif nextCommand == "repeat":
+		d += 1
 	else:
 		print("Sorry, please repeat")
 		cwtw = 1
