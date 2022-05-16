@@ -10,6 +10,7 @@ print("I am waiting to pass along instructions to one who is worthy.\nWhat is yo
 
 name = input(":")
 Position = [ 2 , 2]
+cwtw = 0
 
 
 room = [[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
@@ -166,7 +167,8 @@ def Walk_West():
 
 
 def death():
-        Position = [2,2]
+	Position[0] = 2
+	Position[1] = 2
 
         
 
@@ -191,29 +193,34 @@ while stillPlaying == True:
 	if nextCommand == "walk north":
 		if room[Position[0]][Position[1]][1] == 1:
 			Walk_North()
-			print("you walk through the door to the North")
+			print("You walk through the door to the North")
 		else:
 			print("You cannot walk that way")
+			cwtw = 1
+
 	elif nextCommand == "walk east":
 		if room[(Position[0])][Position[1]][2] == 1:
 			Walk_East()
-			print("you walk through the door to the East")
+			print("You walk through the door to the East")
 		else:
 			print("You cannot walk that way")
+			cwtw = 1
 
 	elif nextCommand == "walk south":
 		if room[(Position[0])][Position[1]][3] == 1:
 			Walk_South()
-			print("you walk through the door to the South")
+			print("You walk through the door to the South")
 		else:
 			print("You cannot walk that way")
+			cwtw = 1
 
 	elif nextCommand == "walk west":
 		if room[(Position[0])][Position[1]][4] == 1:
 			Walk_West()
-			print("you walk through the door to the West")
+			print("You walk through the door to the West")
 		else:
 			print("You cannot walk that way")
+			cwtw = 1
 
 	elif nextCommand == "exit":
 		stillPlaying = False
@@ -222,9 +229,15 @@ while stillPlaying == True:
 		print("You are at position " + str(Position[0]) + "," + str(Position[1]))
 	elif nextCommand == "return":
 		Position = [2,2]
-	if Position[0] == 2 and Position[1] == 1:
-		print(room[2][3][0])
-		death()
+	else:
+		print("Sorry, please repeat")
+	if cwtw == 0:
+		if Position[0] == 2 and Position[1] == 1:
+			print(room[2][1][0])
+			death()
+		else:
+			print(room[Position[0]][Position[1]][0])
+	cwtw = 0
 
 
 
